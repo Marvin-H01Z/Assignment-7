@@ -20,4 +20,4 @@ below.
   5.	Please refer to the demo in the class how to access PHPMyadmin in the server and how to import the SQL file to generate the database.
   The link to access PHPMyadmin: (require VPN connection to SIT)
 
-http://172.21.82.208/shared/phpMyAdmin/
+  http://172.21.82.208/shared/phpMyAdmin/
