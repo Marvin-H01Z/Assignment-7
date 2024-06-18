@@ -9,5 +9,6 @@ below.
      
       To prevent mistake, please use the function Replace in your editor
       *in Visual Studio Code (Edit → Replace, or CTRL+h)
+     
       ![image](https://github.com/Shibaura-WebDesign-2024/Assignment-6/assets/167336534/fec09381-ab08-4959-88ce-ad66204f7be7)
 
