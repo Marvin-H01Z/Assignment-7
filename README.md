@@ -74,8 +74,8 @@ Check the solution from http://172.21.82.208/gift/class9/sol/part1/
 **Change the name of your database**
 
 1.	Open **part2/model/database.php** in VS Code
-2.	Replace the database name with your database name (xxxxxx). 
-3.	Change the value of $username and $password to your username and password for SSH
+2.	Replace the database name with your database name (```xxxxxx```). 
+3.	Change the value of ```$username``` and ```$password``` to your username and password for SSH
 4.	Save the file
 
 **Review and test the code**
