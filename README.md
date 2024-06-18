@@ -16,7 +16,7 @@ below.
   3.	Save the mysql code as “create_db.sql” in your computer. Please do not delete this file as you can always return to restore this 
   database when something goes wrong.
   4.	Import the code in PHPMyadmin in the server. 
-  5.	Please refer to the demo in the class how to access PHPMyadmin in the server and how to import the SQL file to generate the database.
+  5.	Please refer to the demo in the class <ins>how to access PHPMyadmin in the server<ins> and how to import the SQL file to generate the database.
   The link to access PHPMyadmin: (require VPN connection to SIT)
 
         http://172.21.82.208/shared/phpMyAdmin/
