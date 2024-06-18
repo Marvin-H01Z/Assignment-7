@@ -14,10 +14,10 @@ below.
      
       Figure 1 Replacing the word in VS Code using Replace function
 
-  4.	Save the mysql code as “create_db.sql” in your computer. Please do not delete this file as you can always return to restore this 
+  3.	Save the mysql code as “create_db.sql” in your computer. Please do not delete this file as you can always return to restore this 
   database when something goes wrong.
-  5.	Import the code in PHPMyadmin in the server. 
-  6.	Please refer to the demo in the class how to access PHPMyadmin in the server and how to import the SQL file to generate the database.
+  4.	Import the code in PHPMyadmin in the server. 
+  5.	Please refer to the demo in the class how to access PHPMyadmin in the server and how to import the SQL file to generate the database.
   The link to access PHPMyadmin: (require VPN connection to SIT)
 
-
+http://172.21.82.208/shared/phpMyAdmin/
