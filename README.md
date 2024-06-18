@@ -90,4 +90,5 @@ Modify the code
 5.	Add a function to the model named get_product_by_name(). This function should have a parameter for the product name and it should return a product array for the product with the specified name. This provides a way to get the product ID and other product data that corresponds to the product name.
 6.	Modify the index.php file so it uses a function from the model to delete the product named “Fender Telecaster”. To do that, you can use the function that you created in the previous step to get the product ID. Make sure this code displays an appropriate message that indicates whether the product was deleted.
 7.	Test the code to make sure it works correctly. If it does, it should display the products, delete a product, add a product, and display appropriate messages. 
+
 Check the solution from http://172.21.82.208/gift/class9/sol/part2/
