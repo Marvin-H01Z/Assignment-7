@@ -28,8 +28,8 @@ below.
 # Part 1: Enhance the Guitar Shop application
 Change the name of your database
 1.	Open part1/model/database.php in VS Code
-2.	Replace the database name with your database name (xxxxxx). 
-3.	Change the value of $username and $password to your username and password for SSH
+2.	Replace the database name with your database name (```xxxxxx```). 
+3.	Change the value of ```$username``` and ```$password``` to your username and password for SSH
 4.	Save the file
 
 Test the Guitar Shop application 
