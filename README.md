@@ -1,4 +1,4 @@
-![image](https://github.com/Shibaura-WebDesign-2024/Assignment-6/assets/167336534/65713e92-e4f6-4baa-98c4-2fc3e806da09)# Assignment-6
+# Assignment-6
 # MySQL Fundamentals
 # Installation of the database in your university server
 Because we are using the same PHPMyadmin for all users in the university server, there are some
