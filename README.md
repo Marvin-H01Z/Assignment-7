@@ -64,7 +64,7 @@ If necessary, though, you can restore the database by running the **create_db.sq
 
 Refactor the Product Catalog application
 
-14.	Open the **product_list.php** and **product_view.php** files in the **product_catalog** directory. Note that these files use the same code in the <nav> tag to display the list of navigation links for each category.
+14.	Open the **product_list.php** and **product_view.php** files in the **product_catalog** directory. Note that these files use the same code in the ```<nav>``` tag to display the list of navigation links for each category.
 15.	Create a file named **categories_nav.php** in the view directory, and copy all the code for the ```<nav>``` tag from the **product_list.php** file to the **category_nav.php** file. Then, replace the code for the ```<nav>``` tag in the **product_list.php** and **product_view.php** files with the appropriate include statements.
 16.	Test these changes to make sure your refactoring works.
 
