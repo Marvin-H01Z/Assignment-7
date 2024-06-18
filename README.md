@@ -3,7 +3,7 @@
 Because we are using the same PHPMyadmin for all users in the university server, there are some
 changes to the SQL script. Please make sure that you follow this part before doing the exercise
 below.
-  1. Open file create_db_template.sql in Visual Studio Code
+  1. Open file **create_db_template.sql** in Visual Studio Code
   2. Replace xxxx with your student ID (Your username for login to the PhPMyAdmin)
      
       To prevent mistake, please use the function Replace in your editor
@@ -13,7 +13,7 @@ below.
      
       Figure 1 Replacing the word in VS Code using Replace function
 
-  3.	Save the mysql code as “create_db.sql” in your computer. Please do not delete this file as you can always return to restore this 
+  3.	Save the mysql code as **“create_db.sql”** in your computer. Please do not delete this file as you can always return to restore this 
   database when something goes wrong.
   4.	Import the code in PHPMyadmin in the server. 
   5.	Please refer to the demo in the class <ins>how to access PHPMyadmin in the server</ins> and how to import the SQL file to generate the database.
