@@ -21,7 +21,7 @@ below.
 
         http://172.21.82.208/shared/phpMyAdmin/
 
-        ![image](https://github.com/Shibaura-WebDesign-2024/Assignment-6/assets/167336534/52dbd09b-48aa-459f-a121-2f49b7d6198c)
+        ![image](https://github.com/Shibaura-WebDesign-2024/Assignment-6/assets/167336534/33e77d1b-63ef-43aa-a0a8-ac49ea2e2fef)
 
         Figure 2 Login to phpMyAdmin in the university server
 
