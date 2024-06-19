@@ -68,7 +68,7 @@ Refactor the Product Catalog application
 15.	Create a file named **categories_nav.php** in the view directory, and copy all the code for the ```<nav>``` tag from the **product_list.php** file to the **category_nav.php** file. Then, replace the code for the ```<nav>``` tag in the **product_list.php** and **product_view.php** files with the appropriate include statements.
 16.	Test these changes to make sure your refactoring works.
 
-Check the solution from http://172.21.82.208/gift/class9/sol/part1/
+Check the solution from http://172.21.82.208/gift/class8/sol/part1/
 
 # Part 2: Use PHP to work with a database
 **Change the name of your database**
@@ -91,4 +91,4 @@ Check the solution from http://172.21.82.208/gift/class9/sol/part1/
 6.	Modify the index.php file so it uses a function from the model to delete the product named **“Fender Telecaster”**. To do that, you can use the function that you created in the previous step to get the product ID. Make sure this code displays an appropriate message that indicates whether the product was deleted.
 7.	Test the code to make sure it works correctly. If it does, it should display the products, delete a product, add a product, and display appropriate messages. 
 
-Check the solution from http://172.21.82.208/gift/class9/sol/part2/
+Check the solution from http://172.21.82.208/gift/class8/sol/part2/
