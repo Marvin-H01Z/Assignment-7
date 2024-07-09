@@ -11,3 +11,5 @@
     </ul>
 </main>
 <?php include 'view/footer.php'; ?>
+
+<!-- Access: http://localhost/ass7/material/part1/ -->

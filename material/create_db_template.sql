@@ -1,14 +1,21 @@
 -- This code is for class 9 homework only. Please make sure you import it in PhPMyadmin under university server
 -- We do not need to create the database because each student is provided with ONE database of their student ID name
 
+-- Check if the database exists and drop it if it does
+DROP DATABASE IF EXISTS Z124066;
+
+-- Create the new database
+CREATE DATABASE Z124066;
+
+
 -- create the tables
-CREATE TABLE xxxxxx.categories (
+CREATE TABLE Z124066.categories (
   categoryID       INT(11)        NOT NULL   AUTO_INCREMENT,
   categoryName     VARCHAR(255)   NOT NULL,
   PRIMARY KEY (categoryID)
 );
 
-CREATE TABLE xxxxxx.products (
+CREATE TABLE Z124066.products (
   productID        INT(11)        NOT NULL   AUTO_INCREMENT,
   categoryID       INT(11)        NOT NULL,
   productCode      VARCHAR(10)    NOT NULL   UNIQUE,
@@ -17,7 +24,7 @@ CREATE TABLE xxxxxx.products (
   PRIMARY KEY (productID)
 );
 
-CREATE TABLE xxxxxx.orders (
+CREATE TABLE Z124066.orders (
   orderID        INT(11)        NOT NULL   AUTO_INCREMENT,
   customerID     INT            NOT NULL,
   orderDate      DATETIME       NOT NULL,
@@ -25,12 +32,12 @@ CREATE TABLE xxxxxx.orders (
 );
 
 -- insert data into the database
-INSERT INTO xxxxxx.categories VALUES
+INSERT INTO Z124066.categories VALUES
 (1, 'Guitars'),
 (2, 'Basses'),
 (3, 'Drums');
 
-INSERT INTO xxxxxx.products VALUES
+INSERT INTO Z124066.products VALUES
 (1, 1, 'strat', 'Fender Stratocaster', '699.00'),
 (2, 1, 'les_paul', 'Gibson Les Paul', '1199.00'),
 (3, 1, 'sg', 'Gibson SG', '2517.00'),
@@ -47,7 +54,7 @@ INSERT INTO xxxxxx.products VALUES
 * The following tables are for Admin
 *****************************************/
 
-CREATE TABLE xxxxxx.customers_admin (
+CREATE TABLE Z124066.customers_admin (
   customerID        INT            NOT NULL   AUTO_INCREMENT,
   emailAddress      VARCHAR(255)   NOT NULL,
   password          VARCHAR(60)    NOT NULL,
@@ -59,7 +66,7 @@ CREATE TABLE xxxxxx.customers_admin (
   UNIQUE INDEX emailAddress (emailAddress)
 );
 
-CREATE TABLE xxxxxx.addresses_admin (
+CREATE TABLE Z124066.addresses_admin (
   addressID         INT            NOT NULL   AUTO_INCREMENT,
   customerID        INT            NOT NULL,
   line1             VARCHAR(60)    NOT NULL,
@@ -73,7 +80,7 @@ CREATE TABLE xxxxxx.addresses_admin (
   INDEX customerID (customerID)
 );
 
-CREATE TABLE xxxxxx.orders_admin (
+CREATE TABLE Z124066.orders_admin (
   orderID           INT            NOT NULL   AUTO_INCREMENT,
   customerID        INT            NOT NULL,
   orderDate         DATETIME       NOT NULL,
@@ -89,7 +96,7 @@ CREATE TABLE xxxxxx.orders_admin (
   INDEX customerID (customerID)
 );
 
-CREATE TABLE xxxxxx.orderItems_admin (
+CREATE TABLE Z124066.orderItems_admin (
   itemID            INT            NOT NULL   AUTO_INCREMENT,
   orderID           INT            NOT NULL,
   productID         INT            NOT NULL,
@@ -101,7 +108,7 @@ CREATE TABLE xxxxxx.orderItems_admin (
   INDEX productID (productID)
 );
 
-CREATE TABLE xxxxxx.products_admin (
+CREATE TABLE Z124066.products_admin (
   productID         INT            NOT NULL   AUTO_INCREMENT,
   categoryID        INT            NOT NULL,
   productCode       VARCHAR(10)    NOT NULL,
@@ -115,13 +122,13 @@ CREATE TABLE xxxxxx.products_admin (
   UNIQUE INDEX productCode (productCode)
 );
 
-CREATE TABLE xxxxxx.categories_admin (
+CREATE TABLE Z124066.categories_admin (
   categoryID        INT            NOT NULL   AUTO_INCREMENT,
   categoryName      VARCHAR(255)   NOT NULL,
   PRIMARY KEY (categoryID)
 );
 
-CREATE TABLE xxxxxx.administrators (
+CREATE TABLE Z124066.administrators (
   adminID           INT            NOT NULL   AUTO_INCREMENT,
   emailAddress      VARCHAR(255)   NOT NULL,
   password          VARCHAR(255)   NOT NULL,
@@ -131,12 +138,12 @@ CREATE TABLE xxxxxx.administrators (
 );
 
 -- Insert data into the tables
-INSERT INTO xxxxxx.categories_admin (categoryID, categoryName) VALUES
+INSERT INTO Z124066.categories_admin (categoryID, categoryName) VALUES
 (1, 'Guitars'),
 (2, 'Basses'),
 (3, 'Drums');
 
-INSERT INTO xxxxxx.products_admin (productID, categoryID, productCode, productName, description, listPrice, discountPercent, dateAdded) VALUES
+INSERT INTO Z124066.products_admin (productID, categoryID, productCode, productName, description, listPrice, discountPercent, dateAdded) VALUES
 (1, 1, 'strat', 'Fender Stratocaster', 'The Fender Stratocaster is the electric guitar design that changed the world. At this low price, why play anything but the real thing?\r\n\r\nFeatures:\r\n\r\n* Thicker bridge block\r\n* 3-ply parchment pick guard\r\n* Tinted neck', '699.00', '30.00', '2016-10-30 09:32:40'),
 (2, 1, 'les_paul', 'Gibson Les Paul', 'This Les Paul guitar offers a carved top and humbucking pickups. It has a simple yet elegant design. Cutting-yet-rich tone...the hallmark of the Les Paul...pours out of the 490R and 498T Alnico II magnet humbucker pickups, which are mounted on a carved maple top with a mahogany back. The faded finish models are equipped with BurstBucker Pro pickups and a mahogany top. This guitar includes a Gibson hardshell case (Faded and satin finish models come with a gig bag) and a limited lifetime warranty.\r\n\r\nFeatures:\r\n\r\n* Carved maple top and mahogany back (Mahogany top on faded finish models)\r\n* Mahogany neck, ''59 Rounded Les Paul\r\n* Rosewood fingerboard (Ebony on Alpine white)\r\n* Tune-O-Matic bridge with stopbar\r\n* Chrome or gold hardware\r\n* 490R and 498T Alnico 2 magnet humbucker pickups (BurstBucker Pro on faded finish models)\r\n* 2 volume and 2 tone knobs, 3-way switch', '1199.00', '30.00', '2016-12-05 16:33:13'),
 (3, 1, 'sg', 'Gibson SG', 'This Gibson SG electric guitar takes the best of the ''62 original and adds the longer and sturdier neck joint of the late ''60s models. All the classic features you''d expect from a historic guitar. Hot humbuckers go from rich, sweet lightning to warm, tingling waves of sustain. A silky-fast rosewood fretboard plays like a dream. The original-style beveled mahogany body looks like a million bucks. Plus, Tune-O-Matic bridge and chrome hardware. Limited lifetime warranty. Includes hardshell case.\r\n\r\nFeatures:\r\n\r\n* Double-cutaway beveled mahogany body\r\n* Set mahogany neck with rounded ''50s profile\r\n* Bound rosewood fingerboard with trapezoid inlays\r\n* Tune-O-Matic bridge with stopbar tailpiece\r\n* Chrome hardware\r\n* 490R humbucker in the neck position\r\n* 498T humbucker in the bridge position\r\n* 2 volume knobs, 2 tone knobs, 3-way switch\r\n* 24-3/4" scale', '2517.00', '52.00', '2017-02-04 11:04:31'),
@@ -148,12 +155,12 @@ INSERT INTO xxxxxx.products_admin (productID, categoryID, productCode, productNa
 (9, 3, 'ludwig', 'Ludwig 5-piece Drum Set with Cymbals', 'This product includes a Ludwig 5-piece drum set and a Zildjian starter cymbal pack.\r\n\r\nWith the Ludwig drum set, you get famous Ludwig quality. This set features a bass drum, two toms, a floor tom, and a snare�each with a wrapped finish. Drum hardware includes LA214FP bass pedal, snare stand, cymbal stand, hi-hat stand, and a throne.\r\n\r\nWith the Zildjian cymbal pack, you get a 14" crash, 18" crash/ride, and a pair of 13" hi-hats. Sound grooves and round hammer strikes in a simple circular pattern on the top surface of these cymbals magnify the basic sound of the distinctive alloy.\r\n\r\nFeatures:\r\n\r\n* Famous Ludwig quality\r\n* Wrapped finishes\r\n* 22" x 16" kick drum\r\n* 12" x 10" and 13" x 11" toms\r\n* 16" x 16" floor tom\r\n* 14" x 6-1/2" snare drum kick pedal\r\n* Snare stand\r\n* Straight cymbal stand hi-hat stand\r\n* FREE throne', '699.99', '30.00', '2017-07-30 12:46:40'),
 (10, 3, 'tama', 'Tama 5-Piece Drum Set with Cymbals', 'The Tama 5-piece Drum Set is the most affordable Tama drum kit ever to incorporate so many high-end features.\r\n\r\nWith over 40 years of experience, Tama knows what drummers really want. Which is why, no matter how long you''ve been playing the drums, no matter what budget you have to work with, Tama has the set you need, want, and can afford. Every aspect of the modern drum kit was exhaustively examined and reexamined and then improved before it was accepted as part of the Tama design. Which is why, if you start playing Tama now as a beginner, you''ll still enjoy playing it when you''ve achieved pro-status. That''s how good these groundbreaking new drums are.\r\n\r\nOnly Tama comes with a complete set of genuine Meinl HCS cymbals. These high-quality brass cymbals are made in Germany and are sonically matched so they sound great together. They are even lathed for a more refined tonal character. The set includes 14" hi-hats, 16" crash cymbal, and a 20" ride cymbal.\r\n\r\nFeatures:\r\n\r\n* 100% poplar 6-ply/7.5mm shells\r\n* Precise bearing edges\r\n* 100% glued finishes\r\n* Original small lugs\r\n* Drum heads\r\n* Accu-tune bass drum hoops\r\n* Spur brackets\r\n* Tom holder\r\n* Tom brackets', '799.99', '15.00', '2017-07-30 13:14:15');
 
-INSERT INTO xxxxxx.customers_admin (customerID, emailAddress, password, firstName, lastName, shipAddressID, billingAddressID) VALUES
+INSERT INTO Z124066.customers_admin (customerID, emailAddress, password, firstName, lastName, shipAddressID, billingAddressID) VALUES
 (1, 'allan.sherwood@yahoo.com', '650215acec746f0e32bdfff387439eefc1358737', 'Allan', 'Sherwood', 1, 2),
 (2, 'barryz@gmail.com', '3f563468d42a448cb1e56924529f6e7bbe529cc7', 'Barry', 'Zimmer', 3, 4),
 (3, 'christineb@solarone.com', 'ed19f5c0833094026a2f1e9e6f08a35d26037066', 'Christine', 'Brown', 5, 6);
 
-INSERT INTO xxxxxx.addresses_admin (addressID, customerID, line1, line2, city, state, zipCode, phone, disabled) VALUES
+INSERT INTO Z124066.addresses_admin (addressID, customerID, line1, line2, city, state, zipCode, phone, disabled) VALUES
 (1, 1, '100 East Ridgewood Ave.', '', 'Paramus', 'NJ', '07652', '201-653-4472', 0),
 (2, 1, '21 Rosewood Rd.', '', 'Woodcliff Lake', 'NJ', '07677', '201-653-4472', 0),
 (3, 2, '16285 Wendell St.', '', 'Omaha', 'NE', '68135', '402-896-2576', 0),
@@ -161,19 +168,31 @@ INSERT INTO xxxxxx.addresses_admin (addressID, customerID, line1, line2, city, s
 (5, 3, '19270 NW Cornell Rd.', '', 'Beaverton', 'OR', '97006', '503-654-1291', 0),
 (6, 3, '19270 NW Cornell Rd.', '', 'Beaverton', 'OR', '97006', '503-654-1291', 0);
 
-INSERT INTO xxxxxx.orders_admin (orderID, customerID, orderDate, shipAmount, taxAmount, shipDate, shipAddressID, cardType, cardNumber, cardExpires, billingAddressID) VALUES
+INSERT INTO Z124066.orders_admin (orderID, customerID, orderDate, shipAmount, taxAmount, shipDate, shipAddressID, cardType, cardNumber, cardExpires, billingAddressID) VALUES
 (1, 1, '2017-05-30 09:40:28', '5.00', '32.32', '2017-06-01 09:43:13', 1, 2, '4111111111111111', '04/2022', 2),
 (2, 2, '2017-06-01 11:23:20', '5.00', '0.00', NULL, 3, 2, '4111111111111111', '08/2021', 4),
 (3, 1, '2017-06-03 09:44:58', '10.00', '89.92', NULL, 1, 2, '4111111111111111', '04/2022', 2);
 
-INSERT INTO xxxxxx.orderItems_admin (itemID, orderID, productID, itemPrice, discountAmount, quantity) VALUES
+INSERT INTO Z124066.orderItems_admin (itemID, orderID, productID, itemPrice, discountAmount, quantity) VALUES
 (1, 1, 2, '399.00', '39.90', 1),
 (2, 2, 4, '699.00', '69.90', 1),
 (3, 3, 3, '499.00', '49.90', 1),
 (4, 3, 6, '549.99', '0.00', 1);
 
-INSERT INTO xxxxxx.administrators (adminID, emailAddress, password, firstName, lastName) VALUES
+INSERT INTO Z124066.administrators (adminID, emailAddress, password, firstName, lastName) VALUES
 (1, 'admin@myguitarshop.com', '$2y$10$lHqybsUxtrV/y6j6WfG3.utNzpVTkNCm/neRFPnaaQiBWOJVIIEiq', 'Admin', 'User'),
 (2, 'joel@murach.com', '$2y$10$.imVkbsvI2XTC13bMONdUOllyhddj/IhYZBGU87nqZ1j8ebXPezre', 'Joel', 'Murach'),
 (3, 'mike@murach.com', '$2y$10$21KIM2059gSrnAQWV.5Ciufzo9sNqONmmzIhE8qvd/IDaeQvHG1Eq', 'Mike', 'Murach');
 
+
+-- Drop the user if it exists
+DROP USER IF EXISTS 'phpUser'@'localhost';
+
+-- Create the user
+CREATE USER 'phpUser'@'localhost' IDENTIFIED BY 'phpPW1234';
+
+-- Grant all privileges on the Z124066 database to the new user
+GRANT ALL PRIVILEGES ON Z124066.* TO 'phpUser'@'localhost';
+
+-- Apply the changes
+FLUSH PRIVILEGES;

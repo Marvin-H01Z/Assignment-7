@@ -3,6 +3,8 @@ require('../model/database.php');
 require('../model/product_db.php');
 require('../model/category_db.php');
 
+
+//State machine
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
@@ -11,6 +13,36 @@ if ($action == NULL) {
     }
 }
 
+
+
+
+//Categories 
+if ($action == 'list_categories') {
+
+    $categories = get_categories();
+    include('category_list.php');
+
+} else if ($action == 'delete_category') {
+    $category_id = filter_input(INPUT_POST, 'categoryToDelete', FILTER_VALIDATE_INT);   //Get Category ID
+    if ($category_id == NULL || $category_id == FALSE) {
+        $error = "Missing or incorrect category id.";
+        include('../errors/error.php');
+    } else { 
+        delete_category($category_id);      //Call delete function use category_id as identifyier
+        header("Location: .?category_id=$category_id");
+    }
+} else if ($action == 'add_category') {
+    $newCategoryName = filter_input(INPUT_POST, 'newCategoryName_POST');   //Get new category name
+    if ($newCategoryName == NULL || $newCategoryName == FALSE) {
+        $error = "Missing or incorrect category name.";
+        include('../errors/error.php');
+    } else { 
+        add_category($newCategoryName);      //Call add function
+        header('Location: .?action=list_categories');
+    }
+}
+
+//Products
 if ($action == 'list_products') {
     $category_id = filter_input(INPUT_GET, 'category_id', 
             FILTER_VALIDATE_INT);
